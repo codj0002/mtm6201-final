@@ -5,33 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio Site mtm6201-final</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="main/main.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link visually-hidden-focusable">Skip to main content</a>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo-pawsitive-futures.svg" alt="Pawsitive Futures Logo" width="30" height="30" class="d-inline-block align-text-top">
-                </a>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Pawsitive Futures</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <a class="nav-link active" aria-current="page" href="services.html">Our Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pet-care.html">Pet Care</a>
+                            <a class="nav-link" href="pet-care.html">Find Your Pet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a> </li>
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
                     </ul>
+                    <a href="#" class="btn btn-donate ms-lg-3">Donate Now</a>
                 </div>
             </div>
         </nav>
@@ -40,72 +45,65 @@
 <main id="main-content">
 
       <section class="container py-5 text-center">
-                    <h1 class="display-4 fw-bold text-primary">Our Services</h1>
-                    <p class="lead text-muted">Comprehensive care and support for pets and pet owners</p>
+                    <h1 class="display-4 fw-bold" style="color: #2C3E50;">Our Services</h1>
+                    <p class="lead" style="color: #4B5563;">Comprehensive care and support for pets and pet owners</p>
                 </section>
                 
-    <div class="row row-cols-1 g-4">
-            <div class="col">
-                <div class="card bg-image shadow-sm" style="border-radius: 0.5rem; position: relative; overflow: hidden;">
-                    <picture>
-                        <source media="(min-width: 992px)" srcset="images/pet-adoption.jpg, images/pet-adoption.jpg" type="image/jpg">
-                        <source media="(min-width: 768px)" srcset="images/pet-adoption.jpg, images/service-adoption-full-md.jpgpet-adoption.jpg" type="image/jpg">
-                        <img src="images/pet-adoption.jpg" alt="A happy small dog running in a field" class="card-img-top img-fluid" style="object-fit: cover; min-height: 300px;">
-                    </picture>
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
-                    <div class="card-body text-white text-center p-4 p-lg-5" style="position: relative; z-index: 1;">
-                        <i class="bi bi-heart-fill text-danger mb-3 fs-2"></i>
+    <section class="container pb-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            <div class="col d-flex justify-content-center">
+                <div class="card featured-pet-card h-100" style="max-width: 400px;">
+                    <div class="position-relative">
+                        <img src="images/pet-adoption.jpg" alt="A happy small dog running in a field" class="card-img-top" style="height: 260px; object-fit: cover; border-radius: 16px 16px 0 0;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); border-radius: 16px 16px 0 0;"></div>
+                    </div>
+                    <div class="card-body text-center" style="position: relative; z-index: 1;">
+                        <div class="mb-4"><i class="bi bi-heart-fill fs-1 help-icon-adopt"></i></div>
                         <h2 class="card-title h4 fw-bold mb-3">Pet Adoption</h2>
-                        <p class="card-text mb-3">Find your perfect companion from our loving animals.</p>
-                        <ul class="list-unstyled text-start">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> • Pre-screened healthy pets</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> • Vaccination records included</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> • Post-adoption support</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>  •Meet & greet sessions</li>
+                        <p class="card-text mb-4">Find your perfect companion from our loving rescued animals</p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 320px;">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Pre-screened healthy pets</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Vaccination records included</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Post-adoption support</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Meet & greet sessions</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <div class="col">
-                <div class="card bg-image shadow-sm" style="border-radius: 0.5rem; position: relative; overflow: hidden;">
-                    <picture>
-                        <source media="(min-width: 992px)" srcset="images/volunteer-program.jpg, images/volunteer-program.jpg" type="image/jpg">
-                        <source media="(min-width: 768px)" srcset="images/volunteer-program.jpg, images/svolunteer-program.jpg" type="image/jpg">
-                        <img src="images/volunteer-program.jpg" alt="A close-up of a cat and two dogs" class="card-img-top img-fluid" style="object-fit: cover; min-height: 300px;">
-                    </picture>
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
-                    <div class="card-body text-white text-center p-4 p-lg-5" style="position: relative; z-index: 1;">
-                        <i class="bi bi-people-fill text-warning mb-3 fs-2"></i>
+            <div class="col d-flex justify-content-center">
+                <div class="card featured-pet-card h-100" style="max-width: 400px;">
+                    <div class="position-relative">
+                        <img src="images/volunteer-program.jpg" alt="A close-up of a cat and two dogs" class="card-img-top" style="height: 260px; object-fit: cover; border-radius: 16px 16px 0 0;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); border-radius: 16px 16px 0 0;"></div>
+                    </div>
+                    <div class="card-body text-center" style="position: relative; z-index: 1;">
+                        <div class="mb-4"><i class="bi bi-people-fill fs-1 help-icon-volunteer"></i></div>
                         <h2 class="card-title h4 fw-bold mb-3">Volunteer Program</h2>
-                        <p class="card-text mb-3">Join our community of animal lovers making a difference.</p>
-                        <ul class="list-unstyled text-start">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> •Dog walking & socialization</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>  •Cat care & enrichment</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>  •Administrative support</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> •Event coordination</li>
+                        <p class="card-text mb-4">Join our community of animal lovers making a difference</p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 320px;">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dog walking & socialization</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Cat care & enrichment</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Administrative support</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Event coordination</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <div class="col">
-                <div class="card bg-image shadow-sm" style="border-radius: 0.5rem; position: relative; overflow: hidden;">
-                    <picture>
-                        <source media="(min-width: 992px)" srcset="images/foster-care.jpg, images/foster-care.jpg" type="image/jpg">
-                        <source media="(min-width: 768px)" srcset="images/foster-care.jpg, images/foster-care.jpg" type="image/jpg">
-                        <img src="images/foster-care.jpg" alt="A tabby kitten looking to the side" class="card-img-top img-fluid" style="object-fit: cover; min-height: 300px;">
-                    </picture>
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
-                    <div class="card-body text-white text-center p-4 p-lg-5" style="position: relative; z-index: 1;">
-                        <i class="bi bi-house-heart-fill text-info mb-3 fs-2"></i>
+            <div class="col d-flex justify-content-center">
+                <div class="card featured-pet-card h-100" style="max-width: 400px;">
+                    <div class="position-relative">
+                        <img src="images/foster-care.jpg" alt="A tabby kitten looking to the side" class="card-img-top" style="height: 260px; object-fit: cover; border-radius: 16px 16px 0 0;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); border-radius: 16px 16px 0 0;"></div>
+                    </div>
+                    <div class="card-body text-center" style="position: relative; z-index: 1;">
+                        <div class="mb-4"><i class="bi bi-house-heart-fill fs-1 help-icon-donate"></i></div>
                         <h2 class="card-title h4 fw-bold mb-3">Foster Care</h2>
-                        <p class="card-text mb-3">Provide temporary homes for pets in need of extra care.</p>
-                        <ul class="list-unstyled text-start">
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> •Newborn & pregnant animals</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> •Medical recovery</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> •Behavioral rehabilitation</li>
-                            <li><i class="bi bi-check-circle-fill text-success me-2"></i> •Emergency placements</li>
+                        <p class="card-text mb-4">Provide temporary homes for pets in need of extra care</p>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width: 320px;">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Newborn & pregnant animals</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Medical recovery</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Behavioral rehabilitation</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Emergency placements</li>
                         </ul>
                     </div>
                 </div>
@@ -114,37 +112,44 @@
     </section>
 </main>
 
-<footer class="bg-primary text-white py-4 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
-                    <ul class="list-unstyled d-flex flex-row justify-content-center justify-content-md-start mb-0">
-                        <li class="me-3"><a href="#" class="text-white text-decoration-none">About</a></li>
-                        <li class="me-3"><a href="#" class="text-white text-decoration-none">Adopt</a></li>
-                        <li class="me-3"><a href="#" class="text-white text-decoration-none">Get Involved</a></li>
-                    </ul>
+<footer class="footer-custom py-4 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+                <ul class="list-unstyled d-flex flex-row justify-content-center justify-content-md-start mb-0">
+                    <li><a href="#" class="footer-link">About</a></li>
+                    <li><a href="#" class="footer-link">Adopt</a></li>
+                    <li><a href="#" class="footer-link">Get Involved</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 text-center mb-3 mb-md-0">
+                <span class="footer-logo mb-2 d-block">Pawsitive Futures</span>
+                <p class="mb-0">&copy; Pawsitive Futures 2025</p>
+                <div class="mt-2">
+                    <a href="#" class="footer-social" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="footer-social" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                 </div>
-                <div class="col-md-6 text-center mb-3 mb-md-0">
-                    <img src="images/logo-pawsitive-futures.svg" alt="Pawsitive Futures Logo" height="40" class="mb-2">
-                    <p class="mb-0">&copy; Pawsitive Futures 2025</p>
-                </div>
-                <div class="col-md-3 text-center text-md-end">
-                    <ul class="list-unstyled d-flex flex-row justify-content-center justify-content-md-end mb-0">
-                        <li class="me-3"><a href="#" class="text-white text-decoration-none">Your Pets</a></li>
-                        <li class="me-3"><a href="#" class="text-white text-decoration-none">Services</a></li>
-                        <li class="me-3"><a href="#" class="text-white text-decoration-none">Donation</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
-                    </ul>
-                    <div class="mt-2">
-                        <a href="#" class="text-white me-3 text-decoration-none">Privacy</a>
-                        <a href="#" class="text-white text-decoration-none">Terms</a>
-                    </div>
+            </div>
+            <div class="col-md-3 text-center text-md-end">
+                <ul class="list-unstyled d-flex flex-row justify-content-center justify-content-md-end mb-0">
+                    <li><a href="#" class="footer-link">Your Pets</a></li>
+                    <li><a href="#" class="footer-link">Services</a></li>
+                    <li><a href="#" class="footer-link">Donation</a></li>
+                    <li><a href="#" class="footer-link">Contact</a></li>
+                </ul>
+                <div class="mt-2">
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-<script src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js)" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcGdwsf3pVsj0z7WwQJj3S" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcGdwsf3pVsj0z7WwQJj3S" crossorigin="anonymous"></script>
 
 </body>
 </html>
