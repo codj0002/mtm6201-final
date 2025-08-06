@@ -96,10 +96,10 @@ a.nav-link:hover, a.nav-link:focus {
     }
 }
 
-/* Add Bootstrap Icons if you use them (like the heart, person, dollar icons) */
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-/* Navbar - Figma style */
+
 .navbar-custom {
     background-color: var(--bs-secondary) !important;
     color: var(--bs-primary) !important;
@@ -272,13 +272,13 @@ a.nav-link:hover, a.nav-link:focus {
     background: var(--bs-light-purple);
 }
 .help-icon-adopt {
-    color: var(--bs-success) !important;
+    color: var(--bs-success) ;
 }
 .help-icon-volunteer {
-    color: var(--bs-secondary) !important;
+    color: var(--bs-secondary) ;
 }
 .help-icon-donate {
-    color: var(--bs-purple) !important;
+    color: var(--bs-purple) ;
 }
 
 /* Footer */
@@ -297,7 +297,7 @@ a.nav-link:hover, a.nav-link:focus {
 }
 
 .footer-custom .footer-link {
-    color: var(--bs-primary) !important;
+    color: var(--bs-primary) ;
     font-weight: 500;
     margin-right: 1rem;
     text-decoration: none;
@@ -306,7 +306,7 @@ a.nav-link:hover, a.nav-link:focus {
 
 .footer-custom .footer-link:hover {
     text-decoration: underline;
-    color: var(--bs-success) !important;
+    color: var(--bs-success) ;
 }
 
 .footer-custom .footer-social {
@@ -330,7 +330,7 @@ a.nav-link:hover, a.nav-link:focus {
     text-decoration: none;
 }
 
-/* Mobile Navigation Improvements */
+
 @media (max-width: 991.98px) {
     .navbar-custom .navbar-collapse {
         background-color: var(--bs-secondary);
@@ -363,15 +363,15 @@ a.nav-link:hover, a.nav-link:focus {
 /* Responsive Improvements */
 @media (max-width: 767.98px) {
     .hero-banner-custom {
-        padding: 2rem 0 !important;
+        padding: 2rem 0 ;
     }
     
     .hero-banner-custom h1 {
-        font-size: 2rem !important;
+        font-size: 2rem ;
     }
     
     .hero-banner-custom .lead {
-        font-size: 1rem !important;
+        font-size: 1rem ;
     }
     
     .stats-section .stat-number {
@@ -402,11 +402,11 @@ a.nav-link:hover, a.nav-link:focus {
     }
     
     .hero-banner-custom h1 {
-        font-size: 1.75rem !important;
+        font-size: 1.75rem ;
     }
     
     .display-4 {
-        font-size: 2rem !important;
+        font-size: 2rem ;
     }
     
     .stats-section .stat-number {
@@ -418,8 +418,8 @@ a.nav-link:hover, a.nav-link:focus {
     }
 }
 
-/* Ensure proper spacing on all screen sizes */
-@media (min-width: 992px) {
+
+@media (min-width: 1024px) {
     .navbar-custom .navbar-nav {
         align-items: center;
     }
@@ -429,8 +429,7 @@ a.nav-link:hover, a.nav-link:focus {
     }
 }
 
-/* Additional Responsive Footer Improvements */
-@media (max-width: 767.98px) {
+@media (max-width: 780px) {
     .footer-custom {
         padding: 1.5rem 0;
     }
@@ -452,7 +451,7 @@ a.nav-link:hover, a.nav-link:focus {
     }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 580px) {
     .footer-custom .footer-link {
         margin-right: 0.25rem;
         font-size: 0.85rem;
