@@ -103,23 +103,40 @@ a.nav-link:hover, a.nav-link:focus {
 .navbar-custom {
     background-color: var(--bs-secondary) !important;
     color: var(--bs-primary) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
 .navbar-custom .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--bs-primary) !important;
     letter-spacing: 0.5px;
+    transition: color 0.2s;
 }
+
+.navbar-custom .navbar-brand:hover {
+    color: var(--bs-success) !important;
+}
+
 .navbar-custom .nav-link {
     color: var(--bs-primary) !important;
     font-weight: 500;
     position: relative;
     transition: color 0.2s;
+    padding: 0.5rem 1rem !important;
+    margin: 0.25rem 0;
 }
+
+.navbar-custom .nav-link:hover {
+    color: var(--bs-success) !important;
+}
+
 .navbar-custom .nav-link.active {
     box-shadow: 0 2px 0 0 var(--bs-success) inset;
     color: var(--bs-success) !important;
 }
+
 .navbar-custom .btn-donate {
     background: var(--bs-success);
     color: #fff;
@@ -128,9 +145,35 @@ a.nav-link:hover, a.nav-link:focus {
     padding: 0.5rem 1.25rem;
     border: none;
     transition: background 0.2s;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
+
 .navbar-custom .btn-donate:hover {
     background: #8a0000;
+    color: #fff;
+}
+
+/* Hamburger Menu Styling */
+.navbar-custom .navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.navbar-custom .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(173, 0, 0, 0.25);
+    outline: none;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23570D0D' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: all 0.2s;
+}
+
+.navbar-custom .navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23AD0000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Hero Banner */
@@ -243,20 +286,29 @@ a.nav-link:hover, a.nav-link:focus {
     background: var(--bs-secondary);
     color: var(--bs-primary);
     border-radius: 24px 24px 0 0;
+    padding: 2rem 0;
 }
+
 .footer-custom .footer-logo {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--bs-primary);
+    display: block;
 }
+
 .footer-custom .footer-link {
     color: var(--bs-primary) !important;
     font-weight: 500;
     margin-right: 1rem;
+    text-decoration: none;
+    transition: color 0.2s;
 }
+
 .footer-custom .footer-link:hover {
     text-decoration: underline;
+    color: var(--bs-success) !important;
 }
+
 .footer-custom .footer-social {
     display: inline-flex;
     align-items: center;
@@ -269,8 +321,146 @@ a.nav-link:hover, a.nav-link:focus {
     color: var(--bs-primary);
     font-size: 1.25rem;
     transition: background 0.2s, color 0.2s;
+    text-decoration: none;
 }
+
 .footer-custom .footer-social:hover {
     background: var(--bs-primary);
     color: #fff;
+    text-decoration: none;
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 991.98px) {
+    .navbar-custom .navbar-collapse {
+        background-color: var(--bs-secondary);
+        border-radius: 8px;
+        margin-top: 1rem;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-custom .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-custom .nav-link {
+        padding: 0.75rem 1rem !important;
+        border-radius: 4px;
+        margin: 0.25rem 0;
+    }
+    
+    .navbar-custom .nav-link:hover {
+        background-color: rgba(173, 0, 0, 0.1);
+    }
+    
+    .navbar-custom .btn-donate {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Responsive Improvements */
+@media (max-width: 767.98px) {
+    .hero-banner-custom {
+        padding: 2rem 0 !important;
+    }
+    
+    .hero-banner-custom h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-banner-custom .lead {
+        font-size: 1rem !important;
+    }
+    
+    .stats-section .stat-number {
+        font-size: 2rem;
+    }
+    
+    .featured-pet-card .card-body {
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+    
+    .help-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-custom {
+        text-align: center;
+    }
+    
+    .footer-custom .footer-social {
+        margin: 0.25rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .hero-banner-custom h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    
+    .stats-section .stat-number {
+        font-size: 1.75rem;
+    }
+    
+    .featured-pet-card .card-img-top {
+        height: 200px;
+    }
+}
+
+/* Ensure proper spacing on all screen sizes */
+@media (min-width: 992px) {
+    .navbar-custom .navbar-nav {
+        align-items: center;
+    }
+    
+    .navbar-custom .btn-donate {
+        margin-left: 1rem;
+    }
+}
+
+/* Additional Responsive Footer Improvements */
+@media (max-width: 767.98px) {
+    .footer-custom {
+        padding: 1.5rem 0;
+    }
+    
+    .footer-custom .footer-link {
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer-custom .footer-social {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        margin-right: 0.25rem;
+    }
+    
+    .footer-custom ul {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer-custom .footer-link {
+        margin-right: 0.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .footer-custom .footer-social {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
 }
